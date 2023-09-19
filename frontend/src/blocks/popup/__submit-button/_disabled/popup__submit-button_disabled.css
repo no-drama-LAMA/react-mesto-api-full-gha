@@ -1,0 +1,15 @@
+.popup__submit-button_disabled {
+  border: 1px solid rgba(1, 1, 1, 0.2);
+  background-color: white;
+  color: rgba(1, 1, 1, 0.2);
+  pointer-events: none;
+}
+
+.popup__submit-button_disabled:hover {
+  background-color: transparent;
+  cursor: auto;
+}
+
+.login .popup__submit-button_disabled, .register .popup__submit-button_disabled {
+  opacity: 0.5;
+}

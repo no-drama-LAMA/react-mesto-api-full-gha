@@ -1,0 +1,9 @@
+.header__nav-item {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.header__nav-item:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}

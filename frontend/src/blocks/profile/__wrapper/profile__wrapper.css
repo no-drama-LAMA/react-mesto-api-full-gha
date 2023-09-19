@@ -1,0 +1,16 @@
+.profile__wrapper {
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  overflow: visible;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+

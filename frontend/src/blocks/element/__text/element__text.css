@@ -1,0 +1,12 @@
+.element__text {
+  width: 87.234%;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-y: visible;
+  box-sizing: border-box;
+  border: 0;
+}

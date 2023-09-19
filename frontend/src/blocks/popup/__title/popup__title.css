@@ -1,0 +1,33 @@
+.popup__title {
+  margin: 0;
+  margin-bottom: 48px;
+  /*width: 330px;*/
+  width: 100%;
+  align-self: flex-start;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  white-space: nowrap;
+}
+
+#delete-element-form .popup__title {
+  margin-bottom: 13px;
+}
+
+.login .popup__title, .register .popup__title {
+  color: #FFF;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .popup__title {
+    width: 238px;
+    margin-bottom: 75px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

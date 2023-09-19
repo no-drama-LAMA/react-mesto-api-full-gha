@@ -1,0 +1,10 @@
+.element {
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}

@@ -1,0 +1,26 @@
+.popup__input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 358px;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: normal;
+  padding-bottom: 13px;
+  font-family: inherit;
+  outline: 0;
+}
+
+.login .popup__input, .register .popup__input {
+  border-bottom: 2px solid #CCC;
+  color: #FFF;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 600px) {
+  .popup__input {
+      width: 238px;
+  }
+}
