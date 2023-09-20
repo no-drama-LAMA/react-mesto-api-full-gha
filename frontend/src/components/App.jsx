@@ -101,13 +101,15 @@ function App() {
   }
 
   useEffect(() => {
+    if (loggedIn) {
     Promise.all([api.getUserInfo(localStorage.token), api.getInitialCards(localStorage.token)])
       .then(([userData, cardSet]) => {
         setCurrentUser(userData);
         setCards(cardSet);
-  })
-  .catch((error) => console.error(`Ошибка создания страницы ${error}`))
-  }, [])
+      })
+      .catch((error) => console.error(`Ошибка создания страницы ${error}`))
+    }
+  }, [loggedIn])
 
   function handleDeleteCard(evt) {
     evt.preventDefault()
