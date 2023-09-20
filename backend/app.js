@@ -12,7 +12,9 @@ const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.en
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://react.mesto.api.full.nomoredomainsrocks.ru/',
+}));
 
 app.use(helmet()); // Заголовки безопасности можно проставлять автоматически
 
