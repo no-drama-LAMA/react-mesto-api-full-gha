@@ -5,7 +5,7 @@ class Api {
 
   // Проверку статуса ответа сервера
   _checkStatus(res) {
-    return res.ok ? res.json() : Promise.reject
+    return res.ok ? res.json() : Promise.reject()
   }
 
   // Загрузка карточек с сервера
