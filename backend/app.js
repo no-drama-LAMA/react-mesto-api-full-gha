@@ -16,6 +16,7 @@ app.use(cors({
   origin: [
     'https://react.mesto.api.full.nomoredomainsrocks.ru',
     'http://react.mesto.api.full.nomoredomainsrocks.ru',
+    'https://localhost:3000',
   ],
   methods: ['GET', 'PUT', 'POST', 'DELETE'],
   allowedHeaders: ['Authorization', 'Content-Type'],
