@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = 'https://api.react.mesto.api.full.nomoredomainsrocks.ru';
 
 function checkStatus(res) {
   return res.ok ? res.json() : Promise.reject(`${res.status}`)
