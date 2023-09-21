@@ -179,6 +179,7 @@ function App() {
   function handleAuthorization(email, password) {
     authorization(email, password)
       .then((res) => {
+        console.log(localStorage.token);
         localStorage.setItem('token', res.token);
         setLoggedIn(true);
         window.scrollTo(0, 0);
