@@ -6,7 +6,7 @@ import ImagePopup from "./ImagePopup/ImagePopup";
 import { useCallback, useState, useEffect } from "react";
 import CurrentUserContext from "../contexts/CurrentUserContext";
 import api from "../utils/api";
-import { authorization, getUserInfo, registration } from "../utils/auth";
+import { authorization, getUserData, registration } from "../utils/auth";
 import EditProfilePopup from "./EditProfilePopup/EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup/EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup/AddPlacePopup";
@@ -61,7 +61,7 @@ function App() {
 
   useEffect(() => {
     if(localStorage.token) {
-      getUserInfo(localStorage.token)
+      getUserData(localStorage.token)
         .then((res) => {
           setUserEmail(res.data.email)
           setLoggedIn(true)
@@ -162,7 +162,7 @@ function App() {
       .catch((error) => console.error(`Ошибка добавления карточки ${error}`))
   }
 
-  function handleRegistration({email, password}) {
+  function handleRegistration(email, password) {
     registration(email, password)
       .then(() => {
         setInfoToolTipOpen(true);
@@ -176,7 +176,7 @@ function App() {
       })
   }
 
-  function handleAuthorization({email, password}) {
+  function handleAuthorization(email, password) {
     authorization(email, password)
       .then((res) => {
         localStorage.setItem('token', res.token);

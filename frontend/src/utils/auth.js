@@ -26,7 +26,7 @@ export function authorization(password, email) {
     .then((res) => checkStatus(res))
 }
 
-export function getUserInfo(token) {
+export function getUserData(token) {
   return fetch(`${BASE_URL}/users/me`, {
     method: 'GET',
     headers: {
