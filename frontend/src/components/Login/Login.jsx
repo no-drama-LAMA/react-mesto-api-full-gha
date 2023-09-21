@@ -21,7 +21,7 @@ function Login({ name, title, buttonText, handleAuthorization }) {
             placeholder="Email"
             required
             onChange={handleChange}
-            value={inputValues.email ? inputValues.email : ''}
+            value={inputValues.email}
           />
           <span className="popup__error-text" id="login-email-error">{inputMessages.email}</span>
           <input
@@ -32,7 +32,7 @@ function Login({ name, title, buttonText, handleAuthorization }) {
             placeholder="Пароль"
             required
             onChange={handleChange}
-            value={inputValues.password ? inputValues.password : ''}
+            value={inputValues.password}
           />
           <span className="popup__error-text" id="login-password-error">{inputMessages.loginpassword}</span>
         </Form>

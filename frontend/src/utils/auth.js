@@ -4,7 +4,7 @@ function checkStatus(res) {
   return res.ok ? res.json() : Promise.reject(`${res.status}`)
 }
 
-export function registration(password, email) {
+export function registration(email, password) {
   return fetch(`${BASE_URL}/signup`, {
     method: 'POST',
     headers: {
@@ -15,7 +15,7 @@ export function registration(password, email) {
     .then((res) => checkStatus(res))
 }
 
-export function authorization(password, email) {
+export function authorization(email, password) {
   return fetch(`${BASE_URL}/signin`, {
     method: 'POST',
     headers: {
