@@ -10,7 +10,7 @@ export function registration(email, password) {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ password: password, email: email })
+    body: JSON.stringify({ email: email, password: password })
   })
     .then((res) => checkStatus(res))
 }
@@ -21,7 +21,7 @@ export function authorization(email, password) {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ password: password, email: email })
+    body: JSON.stringify({ email: email, password: password })
   })
     .then((res) => checkStatus(res))
 }
