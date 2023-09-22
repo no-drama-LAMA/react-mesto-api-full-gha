@@ -13,7 +13,8 @@ class Api {
     return fetch(`${this._url}/cards`, {
       headers: {
         'Authorization': `Bearer ${token}`
-      }
+      },
+      credentials: 'include',
     })
     .then(this._checkStatus)
   }
@@ -23,7 +24,8 @@ class Api {
     return fetch(`${this._url}/users/me`, {
       headers: {
         'Authorization': `Bearer ${token}`
-      }
+      },
+      credentials: 'include',
     })
     .then(this._checkStatus)
   }
@@ -36,6 +38,7 @@ class Api {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       },
+      credentials: 'include',
       body: JSON.stringify({
         name: data.title,
         about: data.about,
@@ -52,6 +55,7 @@ class Api {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       },
+      credentials: 'include',
       body: JSON.stringify({
         avatar: data.avatar,
       })
@@ -67,6 +71,7 @@ class Api {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       },
+      credentials: 'include',
       body: JSON.stringify({
         name: data.name,
         link: data.link,
@@ -81,7 +86,8 @@ class Api {
       method: like ? 'DELETE' : 'PUT',
       headers: {
         'Authorization': `Bearer ${token}`
-      }
+      },
+      credentials: 'include',
     })
     .then(this._checkStatus)
   }
@@ -92,7 +98,8 @@ class Api {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${token}`
-      }
+      },
+      credentials: 'include',
     })
     .then(this._checkStatus)
   }
