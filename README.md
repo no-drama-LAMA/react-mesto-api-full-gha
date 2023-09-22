@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.55.93
+IP 158.160.55.93
 
 Frontend https://react.mesto.api.full.nomoredomainsrocks.ru
 
