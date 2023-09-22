@@ -4,6 +4,7 @@ const NotFoundError = require('../errors/NotFound');
 const BadRequestError = require('../errors/BadRequest');
 const User = require('../models/user');
 const ConflictError = require('../errors/Conflict');
+const { SECRET_KEY = 'mesto-key' } = process.env;
 
 module.exports.getUsers = (req, res, next) => {
   User.find({})
