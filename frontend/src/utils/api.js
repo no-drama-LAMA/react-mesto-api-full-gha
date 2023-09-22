@@ -12,7 +12,7 @@ class Api {
   getInitialCards(token) {
     return fetch(`${this._url}/cards`, {
       headers: {
-        'Authorization': `Bearer ${localStorage.getItem('token')}`
+        'Authorization': `Bearer ${token}`
       }
     })
     .then(this._checkStatus)
@@ -22,7 +22,7 @@ class Api {
   getUserInfo(token) {
     return fetch(`${this._url}/users/me`, {
       headers: {
-        'Authorization': `Bearer ${localStorage.getItem('token')}`
+        'Authorization': `Bearer ${token}`
       }
     })
     .then(this._checkStatus)
@@ -34,7 +34,7 @@ class Api {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${localStorage.getItem('token')}`
+        'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify({
         name: data.title,
@@ -50,7 +50,7 @@ class Api {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${localStorage.getItem('token')}`
+        'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify({
         avatar: data.avatar,
@@ -65,7 +65,7 @@ class Api {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${localStorage.getItem('token')}`
+        'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify({
         name: data.name,
@@ -80,7 +80,7 @@ class Api {
     return fetch(`${this._url}/cards/${cardId}/likes`, {
       method: like ? 'DELETE' : 'PUT',
       headers: {
-        'Authorization': `Bearer ${localStorage.getItem('token')}`
+        'Authorization': `Bearer ${token}`
       }
     })
     .then(this._checkStatus)
@@ -91,7 +91,7 @@ class Api {
     return fetch(`${this._url}/cards/${cardId}`, {
       method: 'DELETE',
       headers: {
-        'Authorization': `Bearer ${localStorage.getItem('token')}`
+        'Authorization': `Bearer ${token}`
       }
     })
     .then(this._checkStatus)
