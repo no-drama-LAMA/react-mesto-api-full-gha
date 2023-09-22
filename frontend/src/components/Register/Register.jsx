@@ -7,7 +7,7 @@ function Register({ name, title, buttonText, handleRegistration }) {
 
   function handleSubmit(evt) {
     evt.preventDefault();
-    handleRegistration(inputValues.password, inputValues.email);
+    handleRegistration(inputValues.email, inputValues.password);
   }
 
   return (

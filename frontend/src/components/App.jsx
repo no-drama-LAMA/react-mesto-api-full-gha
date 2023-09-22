@@ -164,7 +164,7 @@ function App() {
 
   function handleRegistration(email, password) {
     registration(email, password)
-      .then(() => {
+      .then((res) => {
         setInfoToolTipOpen(true);
         setSelectInfoToolTip(true);
         setTimeout(redirect, 1000, '/sign-in');
