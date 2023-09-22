@@ -12,7 +12,6 @@ class Api {
   getInitialCards(token) {
     return fetch(`${this._url}/cards`, {
       headers: {
-        'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       }
     })
@@ -23,7 +22,6 @@ class Api {
   getUserInfo(token) {
     return fetch(`${this._url}/users/me`, {
       headers: {
-        'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       }
     })
@@ -82,7 +80,6 @@ class Api {
     return fetch(`${this._url}/cards/${cardId}/likes`, {
       method: like ? 'DELETE' : 'PUT',
       headers: {
-        'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       }
     })
@@ -94,7 +91,6 @@ class Api {
     return fetch(`${this._url}/cards/${cardId}`, {
       method: 'DELETE',
       headers: {
-        'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       }
     })
