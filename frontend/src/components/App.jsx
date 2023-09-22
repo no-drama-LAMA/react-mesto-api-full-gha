@@ -63,7 +63,7 @@ function App() {
     if(localStorage.token) {
       getUserData(localStorage.token)
         .then((res) => {
-          setUserEmail(res.data.email)
+          setUserEmail(res.email)
           setLoggedIn(true)
           redirect('/')
         })
