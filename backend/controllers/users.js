@@ -86,7 +86,7 @@ module.exports.login = (req, res, next) => {
       // создадим токен
       const token = jwt.sign(
         { _id: user._id },
-        'some-secret-key',
+        SECRET_KEY,
         { expiresIn: '7d' }, // токен будет просрочен через час после создания
       );
       // вернём токен
